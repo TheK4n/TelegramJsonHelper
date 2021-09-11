@@ -12,8 +12,9 @@ async def on_startup(dispatcher):
     await set_default_commands(dispatcher)
     print("Bot started")
 
+
 async def on_shutdown(dispatcher):
-    print("Bot stoped")
+    print("Bot stopped")
     dispatcher.stop_polling()
 
 

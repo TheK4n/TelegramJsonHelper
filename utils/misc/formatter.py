@@ -18,3 +18,8 @@ def json_formatter(json_string: str, indentor: str = '  ') -> str:
         else:
             temp += char
     return res
+
+
+def get_formatted_message(source) -> str:
+    return '<code>' + json_formatter(str(source)) + '</code>'
+
