@@ -10,9 +10,8 @@ async def on_startup(dispatcher):
     await set_default_commands(dispatcher)
 
 
-async def on_shutdown(dp):
-
-    await dp.close()
+async def on_shutdown(dispatcher):
+    dispatcher.stop_polling()
 
 
 if __name__ == '__main__':
