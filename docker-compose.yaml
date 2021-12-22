@@ -1,0 +1,7 @@
+
+services:
+  tg:
+    image: thek4n/tgjsonhelper
+    restart: always
+    env_file:
+      - ./.env
