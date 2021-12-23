@@ -11,7 +11,6 @@ content_types = ['text', 'document', 'audio', 'photo', 'sticker', 'video', 'vide
 @dp.edited_message_handler(content_types=content_types)
 @dp.message_handler(content_types=content_types)
 async def all_messages_handler(message: types.Message):
-    await message.reply("sadf")
     try:
         await message.reply(get_formatted_message(message), parse_mode=types.ParseMode.HTML)
     except MessageIsTooLong:
